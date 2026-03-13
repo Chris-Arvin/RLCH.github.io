@@ -57,7 +57,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RLCH: Safe Reinforcement Learning Navigation Based on Action Chunking and Homology CLass</h1>
+          <h1 class="title is-1 publication-title">RLCH: Safe RL Navigation Based on Action Chunking and Homology CLass</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block"> Anonymous authors</span>
           </div>
@@ -79,32 +79,32 @@
         </div>
         <div class="video-item">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline>
-            <source src="./videos/living_room2.mp4" type="video/mp4">
+            <source src="./static/videos/living_room2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-item">
           <video poster="" id="shiba" autoplay controls muted loop playsinline>
-            <source src="./videos/dining_room1.mp4" type="video/mp4">
+            <source src="./static/videos/dining_room1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-item">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline>
-            <source src="./videos/dining_room2.mp4" type="video/mp4">
+            <source src="./static/videos/dining_room2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-item">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline>
-            <source src="./videos/warehouse_obs1.mp4" type="video/mp4">
+            <source src="./static/videos/warehouse_obs1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-item">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline>
-            <source src="./videos/warehouse_obs2.mp4" type="video/mp4">
+            <source src="./static/videos/warehouse_obs2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="video-item">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline>
-            <source src="./videos/meeting_room.mp4" type="video/mp4">
+            <source src="./static/videos/meeting_room.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -122,13 +122,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Robust and flexible leader-following is a critical capability for robots to integrate into human society. While existing methods struggle to generalize to leaders of arbitrary form and often fail when the leader temporarily leaves the robot's field of view, this work introduces a unified framework addressing both challenges. 
+            Collision risk perception is a critical challenge in reinforcement learning -based robot navigation, directly impacting system safety and practicality.
           </p>
           <p>
-            First, traditional detection models are replaced with a segmentation model, allowing the leader to be anything. To enhance recognition robustness, a distance frame buffer is implemented that stores leader embeddings at multiple distances, accounting for the unique characteristics of leader-following tasks. Second, a goal-aware adaptation mechanism is designed to govern robot planning states based on the leader’s visibility and motion, complemented by a graph-based planner that generates candidate trajectories for each state, ensuring efficient following with obstacle avoidance.
+            To solve this, this chapter proposes a collision risk-aware RL navigation method (RLCH), focusing on improving the Critic network’s collision risk perception accuracy and recognition ability. Its main innovations are twofold: 1) A homology-based difference reward function for online training quantifies the homology discrepancy between reference and model-generated trajectories, resolving the inherent conflict between goal-approaching and obstacle-avoidance rewards. 2) A negative sampling strategy for offline training collects collision-related trajectory samples, enabling the Critic network to perceive collision penalty signals and enhance its collision risk sensitivity.
           </p>
           <p>
-            Simulations and real-world experiments with a legged robot follower and various leaders (human, ground robot, UAV, legged robot, stop sign) in both indoor and outdoor environments show competitive improvements in follow success rate, reduced visual loss duration, and enhanced safety margins. In crowd navigation, the local goal plays a crucial role in trajectory initialization, optimization, and evaluation. Recognizing that when the global goal is distant, the robot's primary objective is avoiding collisions, making it less critical to pass through the exact local goal point, this work introduces the concept of <i>goal lines</i>, which extend the traditional local goal from a single point to multiple candidate lines. 
+            Experiments on private and public datasets show that the proposed reward mechanism outperforms mainstream ones in key metrics (navigation safety, motion efficiency, zero-shot generalization), providing technical support for RL’s practical application in robot safe navigation.
           </p>
           <p>
           </p>
